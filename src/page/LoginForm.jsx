@@ -19,7 +19,7 @@ import {
 } from "@mui/material";
 
 
-axios.defaults.baseURL = "http://localhost:3000"
+axios.defaults.baseURL = "https://backend-login-1-qrs2.onrender.com/"
 
 const LoginForm = () => {
   const [emailOrUsername, setEmailOrUsername] = useState("");
@@ -101,7 +101,7 @@ const LoginForm = () => {
 
 
     // Gửi yêu cầu POST đến backend
-    axios.post('/login', data)
+    axios.post('https://backend-login-1-qrs2.onrender.com/login', data)
       .then((response) => {
         console.log('response: ' + response.data.success)
         if (rememberMe && response.data.success) {
